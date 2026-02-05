@@ -1,6 +1,6 @@
 ---
 name: planning-with-files
-description: Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md. Use when starting complex multi-step tasks, research projects, or any task requiring >5 tool calls.
+description: Implements Manus-style file-based planning for complex tasks. Creates task_plan.md, findings.md, and progress.md, and maintains human-readable TASK_PROGRESS.md updates. Use when starting complex multi-step tasks, research projects, or any task requiring >5 tool calls.
 ---
 
 # Planning with Files
@@ -23,13 +23,30 @@ Before ANY complex task:
 
 > **Note:** Run helper scripts with `sh` or `bash` to avoid execute-permission issues.
 
-1. **Create `task_plan.md`** — Use [templates/task_plan.md](templates/task_plan.md) as reference
-2. **Create `findings.md`** — Use [templates/findings.md](templates/findings.md) as reference
-3. **Create `progress.md`** — Use [templates/progress.md](templates/progress.md) as reference
-4. **Re-read plan before decisions** — Refreshes goals in attention window
-5. **Update after each phase** — Mark complete, log errors
+1. **Clear or create `TASK_PROGRESS.md`** — Reset file for the new user request
+2. **Create `task_plan.md`** — Use [templates/task_plan.md](templates/task_plan.md) as reference
+3. **Create `findings.md`** — Use [templates/findings.md](templates/findings.md) as reference
+4. **Create `progress.md`** — Use [templates/progress.md](templates/progress.md) as reference
+5. **Re-read plan before decisions** — Refreshes goals in attention window
+6. **Update after each phase** — Mark complete, log errors
 
 > **Note:** Planning files go in your project root, not the skill installation folder.
+
+## TASK_PROGRESS.md Output (Human-Readable Only)
+
+- **Location:** Project root.
+- **Reset rule:** Before creating a new task plan for each user request, clear or create `TASK_PROGRESS.md`.
+- **When to write:** Append a plain-language summary of the task plan (goal and main steps) when a plan is created, during progress updates, and on completion or exception.
+- **Language:** Use the current user request language. If mixed, use the dominant language. If undetectable, use English.
+- **Audience:** Non-technical users in AIGC design contexts; clear and plain wording.
+- **Content limits:** Do not include commands, tools/skills, environment variables, secrets, file paths, code, or technical error causes.
+- **Errors:** If an exception happens, write that an internal error occurred without details. If the error occurred before any progress entry, attempt to write the error summary again.
+- **Subtasks:** If there are multiple subtasks, you may say "item N of M" in natural language.
+- **Format:** Markdown file, and content must be natural language only (no technical details).
+- **Task plan sync:** When a new `task_plan.md` is created, append a markdown summary of the task goal and the main phases in the user's language.
+- **Findings sync:** When `findings.md` is updated, append a markdown summary of the new findings in the user's language.
+- **Detail level:** Provide fuller progress context (what is done, what is in progress, what is next) while staying non-technical.
+- **Completion tone:** When marking a task as complete in `TASK_PROGRESS.md`, append 1-2 celebratory emojis.
 
 ## The Core Pattern
 
@@ -49,6 +66,12 @@ Filesystem = Disk (persistent, unlimited)
 | `progress.md` | Session log, test results | Throughout session |
 
 ## Critical Rules
+
+### 0. Reset TASK_PROGRESS.md Per Request
+Before creating a new plan, clear or create `TASK_PROGRESS.md` for the current user request.
+
+### 0.1 Sync Plan and Findings
+When `task_plan.md` or `findings.md` changes, append a clear, markdown-formatted, non-technical summary to `TASK_PROGRESS.md` in the user's language.
 
 ### 1. Create Plan First
 Never start a complex task without `task_plan.md`. Non-negotiable.

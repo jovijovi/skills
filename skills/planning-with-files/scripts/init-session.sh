@@ -9,6 +9,10 @@ DATE=$(date +%Y-%m-%d)
 
 echo "Initializing planning files for: $PROJECT_NAME"
 
+# Reset TASK_PROGRESS.md for the new user request
+: > TASK_PROGRESS.md
+echo "Reset TASK_PROGRESS.md"
+
 # Create task_plan.md if it doesn't exist
 if [ ! -f "task_plan.md" ]; then
     cat > task_plan.md << 'EOF'
