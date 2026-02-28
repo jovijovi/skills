@@ -1,0 +1,4 @@
+interface:
+  display_name: "Amazon Extract"
+  short_description: "Extract Amazon product details and images"
+  default_prompt: "Use $amazon-extract to fetch product details and image URLs from an Amazon URL or ASIN."
