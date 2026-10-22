@@ -8,11 +8,8 @@ Each skill is a folder with a `SKILL.md` file in the [Agent Skills](https://agen
 
 | Skill | What it does |
 |---|---|
-| [amazon-extract](skills/amazon-extract/SKILL.md) | Extract product details and image links from Amazon product pages. |
 | [decide-with-me](skills/decide-with-me/SKILL.md) | Discuss open choices through short rounds of multiple-choice questions, then confirm a plan before acting. |
-| [extract](skills/extract/SKILL.md) | Extract clean content from specific URLs with Tavily's extraction API. |
 | [openai-gpt-image-api](skills/openai-gpt-image-api/SKILL.md) | Generate and edit images with OpenAI GPT Image models through the Image API. |
-| [planning-with-files](skills/planning-with-files/SKILL.md) | Plan complex tasks in persistent Markdown files. |
 | [xiaohongshu-extract](skills/xiaohongshu-extract/SKILL.md) | Extract note metadata from public Xiaohongshu links. |
 
 ## Install
