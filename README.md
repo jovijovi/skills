@@ -6,11 +6,13 @@ Each skill is a folder with a `SKILL.md` file in the [Agent Skills](https://agen
 
 ## Skills
 
-| Skill | What it does |
-|---|---|
-| [decide-with-me](skills/decide-with-me/SKILL.md) | Discuss open choices through short rounds of multiple-choice questions, then confirm a plan before acting. |
-| [openai-gpt-image-api](skills/openai-gpt-image-api/SKILL.md) | Generate and edit images with OpenAI GPT Image models through the Image API. |
-| [xiaohongshu-extract](skills/xiaohongshu-extract/SKILL.md) | Extract note metadata from public Xiaohongshu links. |
+| Skill | Version | What it does |
+|---|---|---|
+| [decide-with-me](skills/decide-with-me/SKILL.md) | 1.0.0 | Discuss open choices through short rounds of multiple-choice questions, then confirm a plan before acting. |
+| [openai-gpt-image-api](skills/openai-gpt-image-api/SKILL.md) | 1.1.0 | Generate and edit images with OpenAI GPT Image models through the Image API. |
+| [xiaohongshu-extract](skills/xiaohongshu-extract/SKILL.md) | 1.0.0 | Extract note metadata from public Xiaohongshu links. |
+
+Each version comes from `metadata.version` in the skill's `SKILL.md`. Update both together.
 
 ## Install
 

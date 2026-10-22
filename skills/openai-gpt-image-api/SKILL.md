@@ -1,10 +1,11 @@
 ---
 name: openai-gpt-image-api
 description: Use OpenAI GPT Image models (especially gpt-image-2) for image generation and editing via the Image API, with guidance on when not to use the Responses image_generation tool.
-version: 1.1.0
-author: jovijovi
-website: https://github.com/jovijovi/skills
 license: MIT
+metadata:
+  version: "1.1.0"
+  author: jovijovi
+  website: https://github.com/jovijovi/skills
 ---
 
 # OpenAI GPT Image API
