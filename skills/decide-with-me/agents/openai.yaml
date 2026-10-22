@@ -1,0 +1,4 @@
+interface:
+  display_name: "Decide With Me"
+  short_description: "Discuss options and decide through guided Q&A"
+  default_prompt: "Use $decide-with-me to walk me through the open choices before you start."
