@@ -1,6 +1,11 @@
 ---
 name: decide-with-me
-description: Discuss open choices with the user through short rounds of multiple-choice questions, then confirm a plan before acting. Use when the user asks to talk something through, compare options or decide interactively (for example "let's discuss", "help me decide", "interactive Q&A", "交互式问答", "讨论一下", "帮我决定"). Also use it first, before any build or design skill, when an open-ended request such as "build me a blog", "set up CI" or "帮我做一个个人博客" leaves key choices open (stack, scope, design, hosting, naming) and a wrong guess would be costly to undo. Not for facts you can look up, or when the user asked you to choose.
+description: Discuss open choices with the user through short rounds of multiple-choice questions, then confirm a plan before acting. Applies to requests in any language. Use it when the user asks to talk something through, compare options or decide interactively (for example "let's discuss", "help me decide" or "interactive Q&A"). Also use it first, before any build or design skill, when an open-ended request such as "build me a blog", "make this folder a website" or "set up CI" leaves key choices open (stack, scope, design, hosting, naming) and a wrong guess would be costly to undo. Not for facts you can look up, or when the user asked you to choose.
+license: MIT
+metadata:
+  version: "1.0.0"
+  author: jovijovi
+  website: https://github.com/jovijovi/skills
 ---
 
 # Decide With Me
@@ -10,7 +15,7 @@ Turn open questions into decisions the user actually made. You research, frame t
 ## When to use
 
 - The user asks for a discussion, an interactive Q&A or help deciding.
-- An open-ended request ("build me a blog", "set up CI", "redesign this page") leaves choices that only the user can make (stack, scope, design, hosting, cost, naming, anything irreversible), and a wrong guess would be costly to undo. Settle these before you follow any other skill, such as a design or build skill.
+- An open-ended request ("build me a blog", "set up CI", "redesign this page") leaves choices that only the user can make (stack, scope, design, hosting, cost, naming, anything irreversible), and a wrong guess would be costly to undo. Settle these before you follow any other skill, such as a design or build skill. Ask even when you cannot act yet, for example in a read-only session: do not fill in those choices yourself.
 
 Skip it for facts you can look up, trivial choices with an obvious default, choices the user left to you, and decisions already made.
 
@@ -28,7 +33,7 @@ Skip it for facts you can look up, trivial choices with an obvious default, choi
 ## Writing questions
 
 - One decision per question, in the user's language and the user's own words for things. Define a term in one line the first time it matters, and use the same name for the same thing in every round.
-- Two to four options that do not overlap, each labeled in a few words. Put your recommended option first and mark it in the user's language, for example "(Recommended)" or "（推荐）".
+- Two to four options that do not overlap, each labeled in a few words. Put your recommended option first and mark it in the user's language, for example "(Recommended)" in English.
 - Describe each option by its consequence: if it is chosen, what happens and what it costs (effort, money, risk, reversibility). Use names, numbers and examples.
 - Give the reason for a recommendation as cause and effect: "because …, so …". If you have no preference, say so.
 - When one choice rules out or constrains another, say so in the option.
