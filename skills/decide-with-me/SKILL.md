@@ -28,7 +28,7 @@ Skip it for facts you can look up, trivial choices with an obvious default, choi
 ## Writing questions
 
 - One decision per question, in the user's language and the user's own words for things. Define a term in one line the first time it matters, and use the same name for the same thing in every round.
-- Two to four options that do not overlap, each labeled in a few words. Put your recommended option first and mark it, for example "(Recommended)" or "（推荐）".
+- Two to four options that do not overlap, each labeled in a few words. Put your recommended option first and mark it in the user's language, for example "(Recommended)" or "（推荐）".
 - Describe each option by its consequence: if it is chosen, what happens and what it costs (effort, money, risk, reversibility). Use names, numbers and examples.
 - Give the reason for a recommendation as cause and effect: "because …, so …". If you have no preference, say so.
 - When one choice rules out or constrains another, say so in the option.
@@ -40,7 +40,7 @@ Skip it for facts you can look up, trivial choices with an obvious default, choi
 
 **With a structured question tool** (for example `AskUserQuestion` in Claude Code), use one call per round: up to four questions, each with a short header, options with descriptions, and previews for visual choices.
 
-**Without one**, write the round as normal Markdown, not inside a code block. Number every question, letter every option and end with the reply hint, even for a single question. Keep the numbers and letters even if your usual style prefers plain bullets, because the user replies with them:
+**Without one**, write the round as normal Markdown, not inside a code block. Number every question, letter every option and end with the reply hint, even for a single question. Write all of it, including the recommendation mark and the reply hint, in the user's language. Keep the numbers and letters even if your usual style prefers plain bullets, because the user replies with them:
 
 ```markdown
 **Q1 · <short header>**: <question>
