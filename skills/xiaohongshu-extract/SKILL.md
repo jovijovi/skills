@@ -1,6 +1,11 @@
 ---
 name: xiaohongshu-extract
 description: Extract metadata from Xiaohongshu (XHS) share or discovery URLs by parsing window.__INITIAL_STATE__ and returning note details. Use when asked to fetch XHS page content, note metadata, video info, or engagement stats from a public XHS link.
+license: MIT
+metadata:
+  version: "1.0.0"
+  author: jovijovi
+  website: https://github.com/jovijovi/skills
 ---
 
 # Xiaohongshu Extract
