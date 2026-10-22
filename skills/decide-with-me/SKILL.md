@@ -61,7 +61,7 @@ Reply like `1a 2b`, or answer in your own words.
 Keep the question numbers and option letters even if your usual style prefers plain bullets: the user replies with them. A round with one question looks like this:
 
 **Q1 · Hosting**: Where should the blog run?
-- **a)** GitHub Pages (Recommended) — free, and it rebuilds on every push; the repository must be public
+- **a)** GitHub Pages (Recommended) — free for public repositories, and it rebuilds on every push
 - **b)** Your own server — full control; you maintain TLS, backups and updates
 
 Reply like `1a`, or answer in your own words.
